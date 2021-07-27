@@ -8,8 +8,15 @@ const pages = {
   },
   postFilms: async (req, res) => {
     let film = await req.body.title
-    console.log(film);
     res.status(200).json({message: `Se ha guardado: ${film}`})    
+  },
+  putFilms: async (req, res) => {
+    let film = await req.body.title
+    res.status(200).json({id:"0", message: `Se ha actualizado ${film}`})    
+  },
+  deleteFilms: async (req, res) => {
+    let film = await req.body.title
+    res.status(200).json({id:"0", message: `Se ha guardado: ${film}`})    
   },
 };
 
