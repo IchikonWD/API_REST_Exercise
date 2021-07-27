@@ -1,10 +1,10 @@
 const film = require("../utils/films");
 
 const pages = {
-  getFilms: (req, res) => {
-    let title = await req.params.id;
+  getFilms: async (req, res) => {
+    let title = req.params.id;
     const response = await film.getMovieByTitle(title);
-    res.status(200).json(response);
+    res.status(201).json(response);
   },
 };
 
