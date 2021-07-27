@@ -9,6 +9,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.use("/api", pages);
+app.use("/", pages)
 
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`);
