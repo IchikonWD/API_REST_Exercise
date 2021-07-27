@@ -13,13 +13,13 @@ app.use("/", pages)
 
 // 404
 app.use(function (req, res, next) {
-    return res.status(404).send({ message: "Route" + req.url + " Not found." });
-  });
-  
-  // 500 - Any server error
-  app.use(function (err, req, res, next) {
-    return res.status(500).send({ error: err });
-  });
+  return res.status(404).send({ message: "Route" + req.url + " Not found." });
+});
+
+// 500 - Any server error
+app.use(function (err, req, res, next) {
+  return res.status(500).send({ error: err });
+});
 
 
 app.listen(port, () => {
