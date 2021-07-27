@@ -5,8 +5,6 @@ const film = {
   getMovieByTitle: async (title) => {
     const res = await fetch(`http://www.omdbapi.com/?t=${title}&apikey=${key}`);
     const data = await res.json();
-    console.log("****************");
-    console.log(data);
     return data;
   },
 };
