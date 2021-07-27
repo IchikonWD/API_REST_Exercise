@@ -6,11 +6,10 @@ const pages = {
     const response = await film.getMovieByTitle(title);
     res.status(201).json(response);
   },
-  notFound404: (req, res, next) => {
-    return res.status(404).send({ message: "Route" + req.url + " Not found." });
-  },
-  notFound500: (req, res, next)=> {
-    return res.status(500).send({ error: err });
+  postFilms: async (req, res) => {
+    let film = await req.body.title
+    console.log(film);
+    res.status(200).json({message: `Se ha guardado: ${film}`})    
   },
 };
 
