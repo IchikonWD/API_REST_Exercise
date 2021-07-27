@@ -16,7 +16,7 @@ const pages = {
   },
   deleteFilms: async (req, res) => {
     let film = await req.body.title
-    res.status(200).json({id:"0", message: `Se ha guardado: ${film}`})    
+    res.status(200).json({id:"0", message: `Se ha borrado: ${film}`})    
   },
 };
 
